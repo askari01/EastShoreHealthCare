@@ -266,9 +266,10 @@
 				DEVELOPMENT_TEAM = 7ZUAX9S88Z;
 				INFOPLIST_FILE = "East Shore Health Care/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.askari.East-Shore-Health-Care";
+				PRODUCT_BUNDLE_IDENTIFIER = com.EastShoreHealthCare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -279,9 +280,10 @@
 				DEVELOPMENT_TEAM = 7ZUAX9S88Z;
 				INFOPLIST_FILE = "East Shore Health Care/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.askari.East-Shore-Health-Care";
+				PRODUCT_BUNDLE_IDENTIFIER = com.EastShoreHealthCare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -304,6 +306,7 @@
 				36B12D291F0E644E00B2FEB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
