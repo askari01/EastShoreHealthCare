@@ -23,7 +23,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
 
     override func viewDidAppear(_ animated: Bool) {
         if isConnectedToNetwork() {
-            if let url = URL(string: "https://www.eastshorepainrelief.com") {
+            if let url = URL(string: "https://www.africakart.com") {
                 let request = URLRequest(url: url)
                 webView.loadRequest(request)
             }
@@ -79,7 +79,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
     
     func reload() {
         if isConnectedToNetwork() {
-            if let url = URL(string: "https://www.eastshorepainrelief.com") {
+            if let url = URL(string: "https://www.africakart.com") {
                 let request = URLRequest(url: url)
                 webView.loadRequest(request)
             }
