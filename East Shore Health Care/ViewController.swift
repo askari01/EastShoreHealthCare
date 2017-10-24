@@ -19,8 +19,15 @@ class ViewController: UIViewController, UIWebViewDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
         webView = WKWebView()
+        // configure WKWebView
         webView.isUserInteractionEnabled = true
         webView.allowsBackForwardNavigationGestures = true
+        webView.scrollView.bounces = true
+        webView.scrollView.isScrollEnabled = true
+        // Allow Scroll to Refresh
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: Selector("refreshWebView"), for: UIControlEvents.valueChanged)
+        webView.scrollView.addSubview(refreshControl)
         view = webView
     }
 
@@ -99,6 +106,11 @@ class ViewController: UIViewController, UIWebViewDelegate {
             alertController.addAction(reloadAction)
             self.present(alertController, animated: true, completion: nil)
         }
+    }
+    
+    func refreshWebView() {
+        // On Scroll to Refresh, Reload Current Page
+        webView.reload()
     }
     
 }
