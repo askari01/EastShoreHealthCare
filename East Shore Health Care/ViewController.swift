@@ -7,17 +7,19 @@
 //
 
 import UIKit
+import WebKit
 import SystemConfiguration
 
 class ViewController: UIViewController, UIWebViewDelegate {
 
-    @IBOutlet weak var webView: UIWebView!
+    var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        webView.delegate = self
+        webView = WKWebView()
+        view = webView
         
     }
 
@@ -25,7 +27,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
         if isConnectedToNetwork() {
             if let url = URL(string: "https://www.africakart.com") {
                 let request = URLRequest(url: url)
-                webView.loadRequest(request)
+                webView.load(request)
             }
         } else {
             print ("no internet")
@@ -81,7 +83,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
         if isConnectedToNetwork() {
             if let url = URL(string: "https://www.africakart.com") {
                 let request = URLRequest(url: url)
-                webView.loadRequest(request)
+                webView.load(request)
             }
         } else {
             print ("no internet")
