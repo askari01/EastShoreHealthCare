@@ -26,9 +26,15 @@ class ViewController: UIViewController, UIWebViewDelegate {
         webView.scrollView.isScrollEnabled = true
         // Allow Scroll to Refresh
         let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: Selector("refreshWebView"), for: UIControlEvents.valueChanged)
+        refreshControl.addTarget(self, action: #selector(ViewController.refreshWebView), for: UIControlEvents.valueChanged)
         webView.scrollView.addSubview(refreshControl)
+        // progressBar
+        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
         view = webView
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -111,6 +117,13 @@ class ViewController: UIViewController, UIWebViewDelegate {
     func refreshWebView() {
         // On Scroll to Refresh, Reload Current Page
         webView.reload()
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        // Display Progress Bar While Loading Pages
+        if keyPath == "estimatedProgress" {
+            print(Float(webView.estimatedProgress))
+        }
     }
     
 }
