@@ -24,13 +24,6 @@ class ViewController: UIViewController, UIWebViewDelegate {
         webView.allowsBackForwardNavigationGestures = true
         webView.scrollView.bounces = true
         webView.scrollView.isScrollEnabled = true
-        // Allow Scroll to Refresh
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(ViewController.refreshWebView), for: UIControlEvents.valueChanged)
-        webView.scrollView.addSubview(refreshControl)
-        // progressBar
-        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
-        view = webView
     }
     
     override func viewWillAppear(_ animated: Bool) {

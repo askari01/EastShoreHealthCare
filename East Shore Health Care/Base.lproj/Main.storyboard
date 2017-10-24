@@ -17,24 +17,8 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pe0-BA-VNV">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="Pe0-BA-VNV" firstAttribute="bottom" secondItem="T6U-xQ-IfI" secondAttribute="bottom" id="3DE-SL-WxJ"/>
-                            <constraint firstItem="Pe0-BA-VNV" firstAttribute="trailing" secondItem="T6U-xQ-IfI" secondAttribute="trailing" id="Jo5-0d-FXD"/>
-                            <constraint firstItem="Pe0-BA-VNV" firstAttribute="top" secondItem="T6U-xQ-IfI" secondAttribute="top" id="ZTo-gl-Iin"/>
-                            <constraint firstItem="Pe0-BA-VNV" firstAttribute="leading" secondItem="T6U-xQ-IfI" secondAttribute="leading" id="sMc-2O-s82"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="T6U-xQ-IfI"/>
                     </view>
                 </viewController>
