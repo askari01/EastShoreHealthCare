@@ -19,8 +19,9 @@ class ViewController: UIViewController, UIWebViewDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
         webView = WKWebView()
+        webView.isUserInteractionEnabled = true
+        webView.allowsBackForwardNavigationGestures = true
         view = webView
-        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -45,7 +46,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
     }
     
     override var prefersStatusBarHidden: Bool {
-        return true
+        return false
     }
     
     override func didReceiveMemoryWarning() {
@@ -99,6 +100,6 @@ class ViewController: UIViewController, UIWebViewDelegate {
             self.present(alertController, animated: true, completion: nil)
         }
     }
-
+    
 }
 
